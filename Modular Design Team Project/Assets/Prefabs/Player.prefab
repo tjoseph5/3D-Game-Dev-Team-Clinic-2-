@@ -65,14 +65,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885f45388837e7b45a8168a7e11b0410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 1639425388852475986}
   speed: 9
   gravity: -19.62
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 1639425388996322329}
   groundDistance: 0.2
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   jumpHeight: 1.75
 --- !u!1 &1639425388996322328
 GameObject:
