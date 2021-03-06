@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TeleportWait : MonoBehaviour
 {
-    private GameObject player;
+    public GameObject player;
     public Transform teleportTo;
     public Animator fadeAnim;
 
@@ -17,7 +17,7 @@ public class TeleportWait : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine("Fade");
+            StartCoroutine(Fade());
         }
     }
 
@@ -31,6 +31,7 @@ public class TeleportWait : MonoBehaviour
         TeleportPlayer();
         Debug.Log("I'm in Coroutine");
         yield return new WaitForSeconds(1f);
+        Debug.Log(player.transform.position);
         player.GetComponent<PlayerController>().speed = 9f;
         player.GetComponent<PlayerController>().jumpHeight = 1.75f;
     }
@@ -39,7 +40,7 @@ public class TeleportWait : MonoBehaviour
     {
         Debug.Log("WHY IS THIS NOT WORKING???");
         // Teleports the player to the designated location.
-        player.transform.localPosition = new Vector3(teleportTo.position.x, teleportTo.position.y, teleportTo.position.z);
+        player.transform.position = teleportTo.position;
         // Set's the player's transform
         //player.transform.rotation = Quaternion.identity; // or teleportTo.transform.rotation
         // Set's the camera's transform
