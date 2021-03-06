@@ -23,23 +23,25 @@ public class TeleportWait : MonoBehaviour
 
     IEnumerator Fade()
     {
-        //player.GetComponent<PlayerController>().speed = 0f;
-        //player.GetComponent<PlayerController>().jumpHeight = 0f;
+        player.GetComponent<PlayerController>().speed = 0f;
+        player.GetComponent<PlayerController>().jumpHeight = 0f;
 
         fadeAnim.SetTrigger("Next");
         yield return new WaitForSeconds(1f);
         TeleportPlayer();
+        Debug.Log("I'm in Coroutine");
         yield return new WaitForSeconds(1f);
-        //player.GetComponent<PlayerController>().speed = 9f;
-        //player.GetComponent<PlayerController>().jumpHeight = 1.75f;
+        player.GetComponent<PlayerController>().speed = 9f;
+        player.GetComponent<PlayerController>().jumpHeight = 1.75f;
     }
 
     public void TeleportPlayer()
     {
+        Debug.Log("WHY IS THIS NOT WORKING???");
         // Teleports the player to the designated location.
-        player.transform.position = teleportTo.transform.position;
+        player.transform.localPosition = new Vector3(teleportTo.position.x, teleportTo.position.y, teleportTo.position.z);
         // Set's the player's transform
-        player.transform.rotation = Quaternion.identity; // or teleportTo.transform.rotation
+        //player.transform.rotation = Quaternion.identity; // or teleportTo.transform.rotation
         // Set's the camera's transform
         Camera.main.transform.rotation = Quaternion.identity;
     }
