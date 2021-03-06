@@ -6,7 +6,7 @@ public class TeleportWait : MonoBehaviour
 {
     private GameObject player;
     public Transform teleportTo;
-    public float waitSeconds;
+    public Animator fadeAnim;
 
     void Start()
     {
@@ -15,14 +15,28 @@ public class TeleportWait : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            Invoke("TeleportPlayer", waitSeconds);
+            StartCoroutine("Fade");
         }
+    }
+
+    IEnumerator Fade()
+    {
+        //player.GetComponent<PlayerController>().speed = 0f;
+        //player.GetComponent<PlayerController>().jumpHeight = 0f;
+
+        fadeAnim.SetTrigger("Next");
+        yield return new WaitForSeconds(1f);
+        TeleportPlayer();
+        yield return new WaitForSeconds(1f);
+        //player.GetComponent<PlayerController>().speed = 9f;
+        //player.GetComponent<PlayerController>().jumpHeight = 1.75f;
     }
 
     public void TeleportPlayer()
     {
+        // Teleports the player to the designated location.
         player.transform.position = teleportTo.transform.position;
         // Set's the player's transform
         player.transform.rotation = Quaternion.identity; // or teleportTo.transform.rotation
