@@ -5358,12 +5358,6 @@ PrefabInstance:
     - {fileID: 1639425388852475980, guid: 0bc5928558a6c4b4f93b67cfaf8db7cd, type: 3}
     - {fileID: 1639425389521337513, guid: 0bc5928558a6c4b4f93b67cfaf8db7cd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0bc5928558a6c4b4f93b67cfaf8db7cd, type: 3}
---- !u!1 &997494474 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1639425388852475985, guid: 0bc5928558a6c4b4f93b67cfaf8db7cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 997494473}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &997494475 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1639425388852475987, guid: 0bc5928558a6c4b4f93b67cfaf8db7cd,
@@ -5376,27 +5370,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 997494473}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &997494477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997494474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 885f45388837e7b45a8168a7e11b0410, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 997494480}
-  speed: 9
-  gravity: -19.62
-  groundCheck: {fileID: 997494479}
-  groundDistance: 0.2
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 512
-  jumpHeight: 1.75
 --- !u!114 &997494478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5411,18 +5384,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 100
   playerBody: {fileID: 997494475}
---- !u!4 &997494479 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1639425388996322329, guid: 0bc5928558a6c4b4f93b67cfaf8db7cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 997494473}
-  m_PrefabAsset: {fileID: 0}
---- !u!143 &997494480 stripped
-CharacterController:
-  m_CorrespondingSourceObject: {fileID: 1639425388852475986, guid: 0bc5928558a6c4b4f93b67cfaf8db7cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 997494473}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1011100590
 Mesh:
   m_ObjectHideFlags: 0
@@ -9166,8 +9127,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733679476}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
+  m_IsTrigger: 0
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
