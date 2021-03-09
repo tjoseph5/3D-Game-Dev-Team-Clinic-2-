@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TeleportWait : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     public Transform teleportTo;
     public Animator fadeAnim;
 
