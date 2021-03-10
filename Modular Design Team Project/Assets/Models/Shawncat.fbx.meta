@@ -8,8 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cat
-    second: {fileID: 5819227119962715586, guid: 91e97c185fc45754da9bd779f950de76,
-      type: 3}
+    second: {instanceID: 0}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -51,7 +50,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
