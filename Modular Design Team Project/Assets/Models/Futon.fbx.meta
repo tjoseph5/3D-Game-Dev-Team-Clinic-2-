@@ -3,7 +3,12 @@ guid: 410430fd6c2f77d43bb9c4c08e019178
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Futon
+    second: {fileID: 2100000, guid: 5c8c9076595587d419ca59c177212bbc, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
